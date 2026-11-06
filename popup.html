@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GS1 check digit calculator</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="head">
+        <img src="icon-48.png" alt="" width="20" height="20" />
+        <h1>Check digit calculator</h1>
+      </header>
+
+      <div class="tabs" role="tablist" aria-label="Symbology">
+        <button type="button" class="tab" role="tab" data-format="gtin-13" aria-selected="false">
+          EAN-13
+        </button>
+        <button type="button" class="tab" role="tab" data-format="gtin-8" aria-selected="false">
+          EAN-8
+        </button>
+        <button type="button" class="tab" role="tab" data-format="gtin-12" aria-selected="false">
+          UPC-A
+        </button>
+        <button type="button" class="tab" role="tab" data-format="gtin-14" aria-selected="true">
+          ITF-14
+        </button>
+      </div>
+
+      <label class="label" for="code" id="code-label">Payload or full code</label>
+      <input id="code" type="text" inputmode="numeric" autocomplete="off" spellcheck="false" placeholder="10012345678902" />
+      <p class="hint" id="code-hint">Enter 13 digits to calculate the check digit, or 14 to verify them.</p>
+
+      <section class="result" id="result" aria-live="polite">
+        <p class="result-label" id="result-label">Result</p>
+        <p class="result-value" id="result-value">—</p>
+        <p class="result-line" id="result-line"></p>
+        <div class="actions">
+          <button type="button" class="btn btn-sm" id="copy" disabled>Copy</button>
+          <button type="button" class="btn btn-sm" id="fix" hidden>Use it</button>
+        </div>
+      </section>
+
+      <section class="convert">
+        <h2>GTIN-13 ↔ GTIN-14</h2>
+        <div class="convert-row">
+          <input id="convert-code" type="text" inputmode="numeric" autocomplete="off" spellcheck="false" value="4006381333931" aria-label="GTIN-13 or GTIN-14" />
+          <select id="convert-indicator" aria-label="Packaging indicator">
+            <option>0</option>
+            <option selected>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+          </select>
+        </div>
+        <p class="converted">
+          <span class="hint">Converted</span>
+          <strong id="converted-value">14006381333938</strong>
+          <button type="button" class="btn btn-sm" id="copy-converted">Copy</button>
+        </p>
+      </section>
+
+      <section class="about" aria-labelledby="about-heading">
+        <h2 id="about-heading">About</h2>
+        <p>
+          Built by <a href="https://gtin14.com/" target="_blank" rel="noreferrer">GTIN-14 Tools</a>,
+          a free GS1 barcode toolkit that runs in your browser — no signup, no uploads.
+        </p>
+        <p>
+          <a href="https://gtin14.com/check-digit-calculator/" target="_blank" rel="noreferrer">Check digit calculator</a>
+          · <a href="https://gtin14.com/bulk-barcode-generator/" target="_blank" rel="noreferrer">Bulk generator</a>
+          · <a href="https://gtin14.com/" target="_blank" rel="noreferrer">gtin14.com</a>
+        </p>
+        <p>
+          Runs offline. Digits never leave this popup.
+          <a href="https://github.com/larrygofast89/gtin14-check-digit" target="_blank" rel="noreferrer">Source code</a>
+        </p>
+      </section>
+    </main>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

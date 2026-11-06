@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "GS1 Check Digit Calculator",
+  "short_name": "Check digit",
+  "version": "1.0.0",
+  "description": "Calculate or verify the GS1 check digit for EAN-13, EAN-8, UPC-A and ITF-14 / GTIN-14 codes. Runs entirely on your device.",
+  "minimum_chrome_version": "102",
+  "action": {
+    "default_title": "Check digit calculator",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon-16.png",
+      "48": "icon-48.png",
+      "128": "icon-128.png"
+    }
+  },
+  "icons": {
+    "16": "icon-16.png",
+    "48": "icon-48.png",
+    "128": "icon-128.png"
+  },
+  "homepage_url": "https://gtin14.com/check-digit-calculator/"
+}
