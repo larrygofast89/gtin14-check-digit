@@ -9,9 +9,11 @@ It is the popup version of the [check digit calculator on gtin14.com](https://gt
 same algorithm, same analysis, no network calls and **no permissions** — nothing you type leaves
 the popup.
 
-- Website — https://gtin14.com
-- Full web tool — https://gtin14.com/check-digit-calculator/
-- Bulk generator — https://gtin14.com/bulk-barcode-generator/
+- Website — [GTIN14 Tools](https://gtin14.com/)
+- The same calculator in the browser — [check digit calculator](https://gtin14.com/check-digit-calculator/)
+- Label a whole shipment from one CSV — [bulk barcode generator](https://gtin14.com/bulk-barcode-generator/)
+- Shipping container codes explained — [SCC-14 barcode](https://gtin14.com/scc-14/)
+- Carton codes for retail marketplaces — [EAN-14 barcode generator](https://gtin14.com/ean-14/)
 
 ## What it does
 
